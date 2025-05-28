@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Story Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Star background effect -->
+  <div class="stars"></div> 
+
+  <!-- Back to Home button -->
+  <a href="home.html" class="back-btn">🏠 Back to Home</a>
+
+  <div class="container">
+    <h1>✨ Story Generator ✨</h1>
+
+    <form id="storyForm">
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre" required>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Romance">Romance</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Mystery">Mystery</option>
+      </select>
+
+      <label for="setting">Setting</label>
+      <select id="setting" name="setting" required>
+        <option value="Haunted Mansion">Haunted Mansion</option>
+        <option value="Mystical Land">Mystical Land</option>
+        <option value="Space Station">Space Station</option>
+        <option value="Ancient Temple">Ancient Temple</option>
+      </select>
+
+      <label for="character">Main Character</label>
+      <input type="text" id="character" name="character" placeholder="Enter a name" required />
+
+      <label for="traits">Traits</label>
+      <select id="traits" name="traits" multiple required>
+        <option value="Brave">Brave</option>
+        <option value="Curious">Curious</option>
+        <option value="Kind">Kind</option>
+        <option value="Adventurous">Adventurous</option>
+        <option value="Clever">Clever</option>
+      </select>
+
+      <label for="theme">Theme</label>
+      <select id="theme" name="theme" required>
+        <option value="Friendship">Friendship</option>
+        <option value="Exploration">Exploration</option>
+        <option value="Courage">Courage</option>
+        <option value="Love">Love</option>
+      </select>
+
+      <label for="length">Story Length</label>
+      <select id="length" name="length" required>
+        <option value="Short (5-10 min)">Short (5-10 min)</option>
+        <option value="Medium (10-20 min)">Medium (10-20 min)</option>
+        <option value="Long (20-30 min)">Long (20-30 min)</option>
+      </select>
+
+      <button type="submit" class="generate-btn">Generate Story</button>
+    </form>
+
+    <div class="output">
+      <h2>Generated Story</h2>
+      <p id="storyOutput">Your story will appear here...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
