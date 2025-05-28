@@ -1,0 +1,621 @@
+/* Importing premium font combination */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Cinzel:wght@600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(-45deg, #0f0e17, #22007c, #2d00b2, #190061);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fffffe;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.home-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #ff8906;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.home-link:hover {
+  color: #f25f4c;
+  text-decoration: underline;
+}
+
+
+/* Enhanced Star Animation Background */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.stars:before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 200px 250px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 300px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 400px 400px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, #ffffff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: starFloat 120s infinite linear;
+  opacity: 0.7;
+}
+
+@keyframes starFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5%) translateX(-2%);
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(30, 30, 60, 0.7);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+  color: #fffffe;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(0deg);
+  animation: containerGlow 12s linear infinite;
+  z-index: -1;
+}
+
+@keyframes containerGlow {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+.container:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffac30, #ff8906, #ff6c3a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+  text-shadow: 0 4px 8px rgba(255, 137, 6, 0.2);
+  letter-spacing: 2px;
+  position: relative;
+  text-align: center;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff8906, transparent);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  text-align: left;
+  color: #d1d1e9;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+form label:before {
+  content: '✧';
+  position: absolute;
+  left: 0;
+  color: #ff8906;
+}
+
+form select,
+form input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(20, 20, 40, 0.6);
+  color: #fffffe;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+form select:focus,
+form input:focus {
+  outline: none;
+  border-color: #ff8906;
+  box-shadow: 
+    0 0 0 3px rgba(255, 137, 6, 0.25),
+    inset 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ff8906' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+/* Styling for multiple select */
+form select[multiple] {
+  height: auto;
+  min-height: 140px;
+  background-image: none;
+  padding-right: 1rem;
+}
+
+form select[multiple] option {
+  padding: 0.7rem;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+form select[multiple] option:checked {
+  background: linear-gradient(90deg, rgba(255, 137, 6, 0.5), rgba(255, 137, 6, 0.2));
+  color: #ffffff;
+}
+
+.generate-btn {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #ff8906, #f25f4c);
+  border: none;
+  color: white;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 10px 25px rgba(242, 95, 76, 0.4),
+    0 5px 15px rgba(242, 95, 76, 0.3);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.generate-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.generate-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 35px rgba(242, 95, 76, 0.5),
+    0 8px 20px rgba(242, 95, 76, 0.4);
+}
+
+.generate-btn:hover:before {
+  left: 100%;
+}
+
+.generate-btn:active {
+  transform: translateY(-2px);
+}
+
+.output {
+  margin-top: 3.5rem;
+  text-align: left;
+  background: rgba(20, 20, 40, 0.6);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 4px solid #ff8906;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.3),
+    0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.output:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(255, 137, 6, 0.8), transparent 70%);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.output h2 {
+  color: #ff8906;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.output h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff8906, transparent);
+}
+
+#storyOutput {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #fffffe;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: 0.3px;
+  padding: 1rem 0;
+}
+
+/* Loading animation for story generation */
+@keyframes pulseText {
+  0% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(0.98); }
+}
+
+#storyOutput:empty:before,
+#storyOutput:contains("Generating story..."):before {
+  content: "✨ Crafting your magical story... ✨";
+  display: block;
+  animation: pulseText 1.8s infinite;
+  text-align: center;
+  color: #d1d1e9;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+  }
+  
+  .output {
+    padding: 1.8rem;
+  }
+  
+  .generate-btn {
+    padding: 1rem 1.8rem;
+  }
+}
+
+/* Additional animation for form elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form label, form select, form input, .generate-btn {
+  animation: fadeInUp 0.6s both;
+}
+
+form label:nth-child(1), form select:nth-child(2) { animation-delay: 0.1s; }
+form label:nth-child(3), form select:nth-child(4) { animation-delay: 0.2s; }
+form label:nth-child(5), form input:nth-child(6) { animation-delay: 0.3s; }
+form label:nth-child(7), form select:nth-child(8) { animation-delay: 0.4s; }
+form label:nth-child(9), form select:nth-child(10) { animation-delay: 0.5s; }
+form label:nth-child(11), form select:nth-child(12) { animation-delay: 0.6s; }
+.generate-btn { animation-delay: 0.7s; }
+
+/* Shimmer effect for title */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+h1 {
+  background: linear-gradient(
+    to right,
+    #ffac30 0%,
+    #ff8906 20%,
+    #ffac30 40%,
+    #ff6c3a 60%,
+    #ffac30 80%,
+    #ff8906 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 6s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Magical shine effect for output box */
+.output {
+  position: relative;
+  overflow: hidden;
+}
+
+.output::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 8s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+
+/* Magical particles floating around */
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(255, 137, 6, 0.4) 0, transparent 2px),
+    radial-gradient(circle at 20% 80%, rgba(255, 137, 6, 0.3) 0, transparent 2px),
+    radial-gradient(circle at 80% 20%, rgba(255, 137, 6, 0.3) 0, transparent 2px),
+    radial-gradient(circle at 90% 90%, rgba(255, 137, 6, 0.4) 0, transparent 2px),
+    radial-gradient(circle at 50% 50%, rgba(255, 137, 6, 0.2) 0, transparent 2px);
+  pointer-events: none;
+  filter: blur(3px);
+  opacity: 0.7;
+  animation: particleFloat 15s infinite linear;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Interactive form controls */
+form select:hover, form input:hover {
+  border-color: rgba(255, 137, 6, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Fancy scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 60, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff8906, #f25f4c);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f25f4c, #ff8906);
+}
+
+/* Story output enhancement */
+#storyOutput {
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#storyOutput:not(:empty):not(:contains("Generating story...")):not(:contains("Error")):not(:contains("No story")) {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Pulsing effect for button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 95, 76, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(242, 95, 76, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 95, 76, 0);
+  }
+}
+
+.generate-btn:focus {
+  animation: pulse 1.5s infinite;
+}
+.back-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff8906, #f25f4c);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(242, 95, 76, 0.4);
+  margin-bottom: 2rem;
+
+  /* Position top-left */
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+}
+
+.back-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(242, 95, 76, 0.5);
+}
+
+.back-btn:active {
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
