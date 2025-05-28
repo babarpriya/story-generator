@@ -1,0 +1,29 @@
+{
+    "scifi_future": {
+      "title": "The Signal from Proxima",
+      "startNode": "start",
+      "nodes": {
+        "start": {
+          "content": "<p>The year is 2187. Earth has changed beyond recognition since the Great Climate Shift...</p>",
+          "choices": [
+            {"text": "Protest the classification", "nextNode": "protest"},
+            {"text": "Accept orders but secretly investigate", "nextNode": "secret"},
+            {"text": "Ask for permission to study under supervision", "nextNode": "permission"}
+          ]
+        }
+      }
+    },
+    "default": {
+      "title": "A New Adventure",
+      "startNode": "start",
+      "nodes": {
+        "start": {
+          "content": "<p>Your adventure begins. What path will you choose?</p>",
+          "choices": [
+            {"text": "Take the first path", "nextNode": "path1"},
+            {"text": "Take the second path", "nextNode": "path2"}
+          ]
+        }
+      }
+    }
+  }
